@@ -14,6 +14,17 @@
     --gradient-dark: linear-gradient(135deg, #1B4B43 0%, #133832 100%);
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
+    --h1-size-desktop: 3.5rem;
+    --h1-size-tablet: 2.8rem;
+    --h1-size-mobile: 2rem;
+    
+    --h2-size-desktop: 2.8rem;
+    --h2-size-tablet: 2.2rem;
+    --h2-size-mobile: 1.8rem;
+    
+    --h3-size-desktop: 1.8rem;
+    --h3-size-tablet: 1.5rem;
+    --h3-size-mobile: 1.2rem;
 }
 
 body {
@@ -124,18 +135,21 @@ header {
 }
 
 .service-info h2 {
-    font-size: 2.5rem;
+    font-size: var(--h2-size-desktop);
     color: var(--secondary-green);
     text-shadow: 0 2px 10px rgba(124, 219, 199, 0.3);
+    line-height: 1.2;
 }
 
 .service-info h3 {
-    font-size: 3.5rem;
+    font-size: var(--h1-size-desktop);
     background: linear-gradient(45deg, var(--accent-coral), var(--secondary-green));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-shadow: none;
+    line-height: 1.3;
+    margin-top: 0.5em;
 }
 
 /* Menu Section */
@@ -156,11 +170,14 @@ header {
 
 .menu-categories a {
     display: block;
-    padding: 10px 15px;
+    padding: 12px 20px;
     color: var(--secondary-green);
     text-decoration: none;
     transition: all 0.3s;
     border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .menu-categories a:hover,
@@ -187,7 +204,7 @@ header {
 }
 
 .menu-list {
-    padding: 20px;
+    padding: 25px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
 }
@@ -198,9 +215,11 @@ header {
 
 .menu-list li {
     color: var(--off-white);
-    padding: 10px 0;
+    padding: 15px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
 }
 
 .menu-list li:last-child {
@@ -243,16 +262,18 @@ header {
 }
 
 .parallax-content h2 {
-    font-size: 3rem;
+    font-size: var(--h2-size-desktop);
     color: var(--off-white);
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
 }
 
 .parallax-content h3 {
-    font-size: 1.5rem;
+    font-size: var(--h3-size-desktop);
     color: var(--secondary-green);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    line-height: 1.3;
 }
 
 /* FAQ Section */
@@ -283,9 +304,9 @@ header {
 }
 
 .faq-question h3 {
-    color: var(--secondary-green);
-    margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: var(--light-green);
+    line-height: 1.4;
 }
 
 .faq-icon {
@@ -789,30 +810,158 @@ footer {
 
 /* FAQ Section Heading Alignment */
 .faq-section h2 {
-    font-size: 2.8rem;
+    font-size: var(--h2-size-desktop);
     letter-spacing: 2px;
-    text-align: left;  /* Align to left */
+    text-align: left;
     margin-bottom: 40px;
-    color: var(--secondary-green);  /* Match brand color */
-    padding-left: 20px;  /* Add some padding from the left */
+    color: var(--secondary-green);
+    line-height: 1.2;
 }
 
 /* FAQ Container Adjustments */
 .faq-section .container {
-    max-width: 900px;  /* Slightly narrower container for better readability */
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /* FAQ Items Style Update */
 .faq-item {
-    background: rgba(124, 219, 199, 0.1);  /* Lighter, more subtle background */
-    border-radius: 4px;  /* Less rounded corners */
-    margin-bottom: 10px;  /* Space between items */
+    background: rgba(124, 219, 199, 0.1);
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .faq-question h3 {
-    color: var(--light-green);  /* Softer text color */
     font-size: 1.2rem;
-    font-weight: 500;
+    color: var(--light-green);
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .service-info h2 {
+        font-size: var(--h2-size-tablet);
+    }
+
+    .service-info h3 {
+        font-size: var(--h1-size-tablet);
+    }
+
+    .parallax-content h2 {
+        font-size: var(--h2-size-tablet);
+    }
+
+    .parallax-content h3 {
+        font-size: var(--h3-size-tablet);
+    }
+
+    .faq-section h2 {
+        font-size: var(--h2-size-tablet);
+        text-align: center;
+    }
+
+    .menu-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-info {
+        padding: 40px 20px;
+    }
+
+    .service-info h2 {
+        font-size: var(--h2-size-mobile);
+    }
+
+    .service-info h3 {
+        font-size: var(--h1-size-mobile);
+    }
+
+    .parallax-content h2 {
+        font-size: var(--h2-size-mobile);
+    }
+
+    .parallax-content h3 {
+        font-size: var(--h3-size-mobile);
+    }
+
+    .faq-section h2 {
+        font-size: var(--h2-size-mobile);
+        margin-bottom: 30px;
+    }
+
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+
+    .menu-list li {
+        font-size: 0.95rem;
+    }
+}
+
+/* Additional improvements for very small screens */
+@media (max-width: 480px) {
+    .service-info {
+        padding: 30px 15px;
+    }
+
+    .service-info h2 {
+        font-size: calc(var(--h2-size-mobile) * 0.9);
+    }
+
+    .service-info h3 {
+        font-size: calc(var(--h1-size-mobile) * 0.9);
+    }
+
+    .parallax-content {
+        padding: 15px;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    .menu-list li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+}
+
+/* Responsive adjustments for menu */
+@media (max-width: 1024px) {
+    .menu-categories a {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+    
+    .menu-list li {
+        font-size: 1.1rem;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-categories a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .menu-list li {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-categories a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+    
+    .menu-list li {
+        font-size: 0.95rem;
+        padding: 8px 0;
+    }
 }
