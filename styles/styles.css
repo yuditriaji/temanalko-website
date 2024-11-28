@@ -218,7 +218,7 @@ header {
 .contact-section.parallax {
     position: relative;
     height: 400px;
-    background: url('assets/img/discoball.jpg') center/cover fixed;
+    background: url('../assets/img/discoball.jpg') center/cover fixed;
     display: flex;
     align-items: center;
     justify-content: center;
