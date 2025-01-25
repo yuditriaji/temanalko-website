@@ -205,12 +205,15 @@ header {
 
 .menu-list {
     padding: 25px;
+    padding-bottom: 45px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    position: relative;
 }
 
 .menu-list ul {
     list-style: none;
+    padding-bottom: 20px;
 }
 
 .menu-list li {
@@ -233,10 +236,46 @@ header {
     object-fit: cover;
 }
 
+/* WhatsApp Order Button */
+.menu-whatsapp-btn {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+    color: #6B4593;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    z-index: 10;
+    width: 80%;
+    max-width: 400px;
+}
+
+.menu-whatsapp-btn i {
+    font-size: 1.4rem;
+    color: #25D366;
+}
+
+.menu-whatsapp-btn:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background: #f8f8f8;
+}
+
 /* Contact Section */
 .contact-section.parallax {
     position: relative;
-    height: 400px;
+    height: 500px;
     background: url('../assets/img/discoball.jpg') center/cover fixed;
     display: flex;
     align-items: center;
@@ -259,12 +298,16 @@ header {
     position: relative;
     z-index: 2;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .parallax-content h2 {
     font-size: var(--h2-size-desktop);
     color: var(--off-white);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     line-height: 1.2;
 }
@@ -274,6 +317,132 @@ header {
     color: var(--secondary-green);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.contact-whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #4b0082;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--secondary-green);
+}
+
+/* Bubble effect */
+.contact-whatsapp-btn::before,
+.contact-whatsapp-btn::after {
+    content: '';
+    position: absolute;
+    background: rgba(124, 219, 199, 0.2);
+    border-radius: 50%;
+    animation: bubbleRise 2s infinite;
+    z-index: 1;
+}
+
+.contact-whatsapp-btn::before {
+    width: 20px;
+    height: 20px;
+    bottom: -20px;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.contact-whatsapp-btn::after {
+    width: 15px;
+    height: 15px;
+    bottom: -15px;
+    left: 65%;
+    animation-delay: 1s;
+}
+
+.contact-whatsapp-btn i {
+    font-size: 1.6rem;
+    color: #25D366;
+    position: relative;
+    z-index: 2;
+    animation: tilt 2s infinite;
+}
+
+.contact-whatsapp-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-whatsapp-btn:hover {
+    background: #fff;
+    color: var(--primary-green);
+    transform: translateY(-2px);
+}
+
+.contact-whatsapp-btn:hover i {
+    transform: rotate(10deg);
+}
+
+/* Bubble animation */
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-30px) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-60px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes tilt {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-whatsapp-btn {
+        padding: 20px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-whatsapp-btn {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes buttonFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes shine {
+    0% { transform: translate(-100%, -100%) rotate(45deg); }
+    20%, 100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+@keyframes gradientPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.9; }
 }
 
 /* FAQ Section */
