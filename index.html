@@ -6,8 +6,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Order liquor and alkohol alcohol online in Jakarta with our 24-hour delivery service. Fast and reliable alcohol, wine, beer, and spirits delivery. Discover premium whiskey, craft beer, and more.">
-    <title>Teman Alko | Delivery Alcohol, Wine, Beer & Spirits Online</title>
+    <meta name="description" content="24-hour liquor delivery in Jakarta. Order alcohol, wine, beer, and spirits online. Fast and reliable service.">
+    <title>Liquor Delivery Jakarta | Alcohol, Wine, Beer & Spirits</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="nav-grid">
                     <a href="#menu" class="nav-button">DRINK MENU</a>
-                    <a href="#" class="nav-button">DOWNLOAD APP</a>
+                    <a href="contact" class="nav-button">DOWNLOAD APP</a>
                     <a href="#contact" class="nav-button">CONTACT US</a>
                     <a href="#faq" class="nav-button">FAQ</a>
                 </div>
@@ -177,9 +177,21 @@
 
                     <!-- Add similar blocks for other categories -->
                 </div>
+                <div class="menu-content" style="position: relative;">
+                    <!-- Existing content -->
+                    <button class="menu-pdf-button" onclick="openPDF()">View Full Menu</button>
+                </div>
             </div>
         </div>
     </section>
+
+<!-- Modal Structure -->
+<div id="pdfModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closePDF()">&times;</span>
+        <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
+    </div>
+</div>
 
     <!-- Contact Form -->
     <section id="contact" class="contact-section parallax">
@@ -204,7 +216,7 @@
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>We deliver 24/7, anytime anywhere you are in Jakarta area.</p>
+                        <p>We deliver until 2 AM, anywhere you are in Jakarta area.</p>
                     </div>
                 </div>
 
@@ -267,5 +279,16 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    function openPDF() {
+        document.getElementById('pdfFrame').src = 'https://gyvveyn5xgsrdtlj.public.blob.vercel-storage.com/PDF/TALCO_NV002-TuaIDvwvVdzvEoYb9YjM8bqJPQInkP.pdf';
+        document.getElementById('pdfModal').style.display = 'block';
+    }
+
+    function closePDF() {
+        document.getElementById('pdfModal').style.display = 'none';
+        document.getElementById('pdfFrame').src = '';
+    }
+    </script>
 </body>
 </html> 
