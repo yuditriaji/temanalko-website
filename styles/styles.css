@@ -1210,6 +1210,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }
 
 .modal-content {
@@ -1221,7 +1222,7 @@ footer {
     max-width: 900px;
     height: 80%;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: auto; /* Allow scrolling within the modal */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
