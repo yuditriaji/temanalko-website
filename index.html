@@ -6,8 +6,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="24-hour liquor delivery in Jakarta. Order alcohol, wine, beer, and spirits online. Fast and reliable service.">
-    <title>Liquor Delivery Jakarta | Alcohol, Wine, Beer & Spirits</title>
+    <meta name="description" content="Order alcohol, wine, beer, and spirits online with fast 24/7 delivery in Jakarta. Pengiriman alkohol cepat di Jakarta. Must be 21+.">
+    <title>Fast Alcohol Delivery Jakarta | Teman Alko - Beli Alkohol Online</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -25,22 +25,59 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZXE7X9VK2"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-TZXE7X9VK2');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TZXE7X9VK2');
     </script>
 
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Teman Alko",
+            "description": "24/7 alcohol delivery in Jakarta. Order wine, beer, and spirits online.",
+            "url": "https://yourwebsite.com",
+            "telephone": "+6285770377952",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jakarta",
+                "addressRegion": "JK",
+                "addressCountry": "ID"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -6.1745,
+                "longitude": 106.8227
+            },
+            "sameAs": [
+                "https://www.instagram.com/temanalco/",
+                "https://www.facebook.com/temanalco/"
+            ]
+        }
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Hoegaarden Beer",
+            "description": "A refreshing Belgian wheat beer.",
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "IDR",
+                "price": "50000",
+                "priceValidUntil": "2026-07-06",
+                "availability": "https://schema.org/InStock"
+            },
+            "image": "assets/img/beer.jpg"
+        }
+    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <!-- Top Section -->
         <section class="top-section">
             <div class="floating-dots">
                 <div class="dot"></div>
@@ -108,7 +145,6 @@
                             </ul>
                         </div>
                         <div class="menu-image">
-                            <!-- <img src="https://placehold.co/600x400/1B4B43/7CDBC7?text=Beer" alt="Beer Selection"> -->
                             <img src="assets/img/beer.jpg" alt="Beer Selection">
                         </div>
                     </div>
@@ -125,7 +161,6 @@
                             </ul>
                         </div>
                         <div class="menu-image">
-                            <!-- <img src="https://placehold.co/600x400/1B4B43/7CDBC7?text=Whiskey" alt="Whiskey Selection"> -->
                             <img src="assets/img/whiskey.jpg" alt="Whiskey Selection">
                         </div>
                     </div>
@@ -140,7 +175,6 @@
                             </ul>
                         </div>
                         <div class="menu-image">
-                            <!-- <img src="https://placehold.co/600x400/1B4B43/7CDBC7?text=Vodka" alt="Whiskey Selection"> -->
                             <img src="assets/img/vodka.jpg" alt="Whiskey Selection">
                         </div>
                     </div>
@@ -155,7 +189,6 @@
                             </ul>
                         </div>
                         <div class="menu-image">
-                            <!-- <img src="https://placehold.co/600x400/1B4B43/7CDBC7?text=Gin" alt="Whiskey Selection"> -->
                             <img src="assets/img/gin.jpg" alt="Whiskey Selection">
                         </div>
                     </div>
@@ -170,7 +203,6 @@
                             </ul>
                         </div>
                         <div class="menu-image">
-                            <!-- <img src="https://placehold.co/600x400/1B4B43/7CDBC7?text=Wine" alt="Whiskey Selection"> -->
                             <img src="assets/img/wine.jpg" alt="Whiskey Selection">
                         </div>
                     </div>
@@ -182,13 +214,13 @@
         </div>
     </section>
 
-<!-- Modal Structure -->
-<div id="pdfModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closePDF()">&times;</span>
-        <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
+    <!-- Modal Structure -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePDF()">×</span>
+            <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
+        </div>
     </div>
-</div>
 
     <!-- Contact Form -->
     <section id="contact" class="contact-section parallax">
@@ -199,6 +231,7 @@
                 <i class="fab fa-whatsapp"></i>
                 <span>Chat now +62 857-7037-7952</span>
             </a>
+            <!-- <p class="compliance">Must be 21+. Drink Responsibly.</p> -->
         </div>
     </section>
 
@@ -216,7 +249,6 @@
                         <p>We deliver until 2 AM, anywhere you are in Jakarta area.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <h3>What is the minimum order?</h3>
@@ -226,7 +258,6 @@
                         <p>Our minimum order is IDR 200,000 for free delivery within Jakarta area.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <h3>How long does delivery take?</h3>
@@ -236,7 +267,6 @@
                         <p>Average delivery time is 30-45 minutes depending on your location and traffic conditions.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <h3>What payment methods do you accept?</h3>
@@ -246,7 +276,6 @@
                         <p>We accept cash on delivery, bank transfers, and major credit/debit cards.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <h3>Do you verify age for alcohol purchases?</h3>
@@ -277,15 +306,27 @@
 
     <script src="js/main.js"></script>
     <script>
-    function openPDF() {
-        document.getElementById('pdfFrame').src = 'https://gyvveyn5xgsrdtlj.public.blob.vercel-storage.com/PDF/TALCO_NV002-TuaIDvwvVdzvEoYb9YjM8bqJPQInkP.pdf';
-        document.getElementById('pdfModal').style.display = 'block';
-    }
+        function openPDF() {
+            document.getElementById('pdfFrame').src = 'https://gyvveyn5xgsrdtlj.public.blob.vercel-storage.com/PDF/TALCO_NV002-TuaIDvwvVdzvEoYb9YjM8bqJPQInkP.pdf';
+            document.getElementById('pdfModal').style.display = 'block';
+        }
 
-    function closePDF() {
-        document.getElementById('pdfModal').style.display = 'none';
-        document.getElementById('pdfFrame').src = '';
-    }
+        function closePDF() {
+            document.getElementById('pdfModal').style.display = 'none';
+            document.getElementById('pdfFrame').src = '';
+        }
+
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.textContent = '+';
+            } else {
+                answer.style.display = 'block';
+                icon.textContent = '-';
+            }
+        }
     </script>
 </body>
-</html> 
+</html>
